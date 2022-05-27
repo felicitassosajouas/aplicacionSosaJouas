@@ -1,7 +1,16 @@
+* {
+  font-family: "Basic", sans-serif; 
+  background:rgb(19,112,133);
+  max-width: '100px';
+  max-height: '100px';
+  color: rgb(181,217,164);
+}
+
+/*
 .App {
   text-align: center;
 }
-
+/*usar en logo*/
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -12,10 +21,8 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+*/
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,11 +30,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
+/*
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +39,4 @@
     transform: rotate(360deg);
   }
 }
+*/
