@@ -1,6 +1,5 @@
 import './nav.css'
 const Nav = (props) => {
-    console.log(props)
     return (
         <div>
         <nav class="nav flex-column">

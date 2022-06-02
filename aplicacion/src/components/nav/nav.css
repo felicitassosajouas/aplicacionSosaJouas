@@ -3,23 +3,25 @@ h1{
     padding: 10px;
     text-align: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 50px;
+    font-weight: 400;
 }
 ul li a{
     display: flex;
     align-items: center;
     text-decoration: none;
     list-style:none ;
-    font-size: 40px;
     font-weight: 400;
 }
 #item{
     padding: 5px;
-    padding-left: 15px;
+    padding-left: 20px;
+    font-size: 25px;
+    font-weight: 400;
 }
 a:hover {
     text-decoration: none;
-    color: rgb(144,167,217) !important;
+    color: rgb(221, 187, 255) !important;
 }
 
 a:active {
