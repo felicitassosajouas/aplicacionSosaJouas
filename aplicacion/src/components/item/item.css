@@ -1,0 +1,10 @@
+.divContainer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+img{
+    max-width: 350px; 
+    text-decoration: none;
+    list-style: none;
+}
