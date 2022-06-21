@@ -6,20 +6,19 @@ const ItemDetailContainer = () => {
     //tengo que guardar las rta del useEffect en un ESTADO
     const [product, setProduct] = useState()
 
-    const params = useParams()
-    console.log(params)
+    const {productId} = useParams()
+
     useEffect(() => {
-        getProductById('params.id').then( response => {
+        getProductById(productId).then(response => {
             setProduct(response)
         })
-    }, [])
-    console.log(product)
+    })
+
     return (
         <>
         <h2>
             Detalle del Producto
-
-            <ItemDetail {...product}/>
+            <ItemDetail {...product} />
         </h2>
         </>
     )

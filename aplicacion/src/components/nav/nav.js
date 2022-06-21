@@ -1,13 +1,17 @@
 import './nav.css'
-const Nav = (props) => {
+import {Link} from 'react-router-dom'
+const Nav = () => {
     return (
         <div className="container-fluid">
-        <nav className="nav flex-column" id="nav">
-            <a aria-current="page" href="#" style={{color:'rgb(181,217,164)'}} id="item" class="rounded-pill">INICIO</a>
-            <a href="" style={{color:'rgb(181,217,164)'}} id="item" className="rounded-pill">PORTA SAHUMERIOS</a>
-            <a href="" style={{color:'rgb(181,217,164)'}} id="item" className="rounded-pill">CENICEROS</a>
-        </nav>
-    </div>
+            <Link to='/'>
+                <h2> HOME </h2>
+            </Link>
+            <nav className="nav flex-column" id="nav">
+                <Link to='/category/inicio'aria-current="page" href="#" style={{color:'rgb(181,217,164)'}} id="item" class="rounded-pill">INICIO</Link>
+                <Link to='/category/portasahumerios' href="" style={{color:'rgb(181,217,164)'}} id="item" className="rounded-pill">PORTA SAHUMERIOS</Link>
+                <Link to='/category/ceniceros'href="" style={{color:'rgb(181,217,164)'}} id="item" className="rounded-pill">CENICEROS</Link>
+            </nav>
+        </div>
     )
 }
 export default Nav
