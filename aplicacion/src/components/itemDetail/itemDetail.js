@@ -1,4 +1,3 @@
-
 const ItemDetail = ({img, name, price, description }) => {
     return (
         <>

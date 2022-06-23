@@ -1,16 +1,17 @@
 import './item.css'
-import {link} from 'react'
-const Item = ({id, name, img, price}) => {
+//AGREGO ESTE LINK Y DEJA DE MOSTRAR LA LIST
+//import { Link } from 'react-router-dom'
+const Item = ({/* id, */ name, img, price}) => {
     return (
         <>
-        <div className="divContainer">
-            <li className="card text-white bg-dark mb-3">
-                {name}
-                <img src={img} alt={name}/>
-                { '$' + price}
-            </li>
-            <link to={`/detail/${id}`} className="Option">Ver Detalle</link>
-        </div>
+            <div className="divContainer">
+                <li className="card text-white bg-dark mb-3">
+                    {name}
+                    <img src={img} alt={name}/>
+                    { '$' + price}
+                </li>
+                {/* <Link to={`/detail/${id}`}>Ver Detalle</Link> */} 
+            </div>
         </>
     )       
 }

@@ -1,4 +1,6 @@
-.itemList{
+#itemList{
+    padding-right: 8px;
+    padding-top: 45px;
     flex-direction: column;
     display: flex;
     align-items: center;

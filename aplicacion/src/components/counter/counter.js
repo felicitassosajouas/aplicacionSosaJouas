@@ -1,6 +1,6 @@
 import { useState } from 'react'
 //import Button from '../button/button'
-import App from '../../App'
+//import App from '../../App'
 const Counter = ({initial, stock, title, onAdd}) => {
     
     const [count, setCount] = useState(initial)
@@ -16,9 +16,9 @@ const Counter = ({initial, stock, title, onAdd}) => {
         }
     }
 
-    const reset = () => {
+    /* const reset = () => {
         setCount(initial)
-    }
+    } */
 
     return(
         <div>

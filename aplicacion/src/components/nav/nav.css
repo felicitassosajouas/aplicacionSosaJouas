@@ -1,17 +1,24 @@
-h1{
+/* h1{
     color: #95b6b2;
     padding: 10px;
-    text-align: center;
-    align-items: center;
     font-size: 50px;
     font-weight: 400;
-}
-ul li a{
+} */
+li .type {
     text-decoration: none;
-    list-style:none ;
-    font-weight: 400;
+    list-style: none;
 }
-#item{
+#navBar{
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    
+}
+#nav{
+    justify-content: space-around;
+    align-items: center;
+}
+.item{
     padding: 5px;
     padding-left: 20px;
     font-size: 25px;
@@ -21,7 +28,6 @@ a:hover {
     text-decoration: none;
     color: rgb(221, 187, 255) !important;
 }
-
 a:active {
     text-decoration: none;
 }
