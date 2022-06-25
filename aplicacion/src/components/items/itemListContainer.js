@@ -1,9 +1,13 @@
 //uso useEffect para llamar los datos después de que el componente fue montado
 import { useState, useEffect } from 'react'
 //con llaves porque llamo a un elemento no un archivo
-import { getProducts, getProductsByCategory } from '../asyncmock'
+//import { getProducts, getProductsByCategory } from '../asyncmock'
 import ItemList from './itemList'
 import {useParams} from 'react-router-dom'
+
+//CON FIREBASE
+import {getDocs, collection, query, where} from 'firebase/firestore'
+import {db} from '../../service/firebase/index'
 const ItemListContainer = (props) => {
     
     //useState([]) --> comienza como un array vacío
@@ -16,7 +20,25 @@ const ItemListContainer = (props) => {
     //llamado a API antes del return
     useEffect(() => {
         setLoading(true)
-        if(!categoryId){
+
+        //CON FIREBASE
+        const collectionRef = categoryId ? (
+            query(collection(db, 'products'), where('category', '==', categoryId))
+        ) : (collection (db,'products'))
+
+        getDocs(collectionRef).then(response => {
+            console.log(response)
+            const productsFormatted = response.docs.map(doc => {
+                return{id: doc.id, ...doc.data()}
+            })
+            setProducts(productsFormatted)
+        }).catch(error => {
+            console.log(error)
+        }).finally(() => {
+            setLoading(false)
+        })
+
+        /* if(!categoryId){
             getProducts().then(prods => {
                 setProducts(prods)
             }).catch(error => {
@@ -30,7 +52,7 @@ const ItemListContainer = (props) => {
             }).catch(error => {
                 console.log(error)
             })
-        }
+        } */
     }, [categoryId])
 
     if(loading){

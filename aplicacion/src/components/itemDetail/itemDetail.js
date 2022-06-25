@@ -1,14 +1,16 @@
 import {useState, useContext} from 'react'
 import CartContext from '../../context/cartContext'
 import { Link } from 'react-router-dom'
+import NotContext from '../notification/notification'
 const ItemDetail = ({img, name, price, description, id, stock, ItemCount}) => {
 
     const [quantityAdded, setQuantityAdded] = useState(0)
     
     const [inputType, setInputType] = useState('button')
     
+    const setNot = useContext(CartContext)
 
-    const {addItem} = useContext(CartContext)
+    const {addItem} = useContext(NotContext)
 
     
     const changeCount = () => {
@@ -19,7 +21,7 @@ const ItemDetail = ({img, name, price, description, id, stock, ItemCount}) => {
 
 
     const handleOnAdd = (quantity) => {
-        console.log(`Se agregaron ${quantity} ${name}`)
+        setNot('success', `Se agregaron ${quantity} ${name}`, 3)
         addItem({id, name, price, quantity})
         setQuantityAdded(quantity)
     }
