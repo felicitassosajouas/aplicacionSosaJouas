@@ -10,12 +10,11 @@ const ItemDetailContainer = () => {
     //funcion que al ejecutarse reotnra todos los parámetros d la URL con los nombres que yo le asigné en APP.js
     const {productId} = useParams()
 
-
     useEffect(() => {
         getProductById(productId).then( response => {
             setProduct(response)
         })
-    })
+    },[productId])
     //console.log(product)
 
 

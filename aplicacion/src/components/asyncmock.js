@@ -16,7 +16,7 @@ const products = [
     },]
 
 export const getProducts = () => {
-    return new Promise ((resolve,/*reject*/) => {
+    return new Promise ((resolve, _reject) => {
         setTimeout (() => {
             resolve(products)
         }, 2000) //luego d 2seg resuelve el array d prod
@@ -24,7 +24,7 @@ export const getProducts = () => {
 }
 
 export const getProductsByCategory = (categoryId) => {
-    return new Promise ((resolve,/*reject*/) => {
+    return new Promise ((resolve,_reject) => {
         setTimeout (() => {
             resolve(products.filter(prod => prod.category === categoryId))
         }, 2000) //luego d 2seg resuelve el array d prod
@@ -33,7 +33,7 @@ export const getProductsByCategory = (categoryId) => {
 
 //simular el retardo que puede haber al consultar esos datos:
 export const getProductById = (id) => {
-    return new Promise ((resolve,/*reject*/) => {
+    return new Promise ((resolve,_reject) => {
         setTimeout (() => {
             //find para que del array encuentre UNO SOLO
             resolve(products.find( prod => prod.id === id))

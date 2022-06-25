@@ -10,7 +10,10 @@ const Item = ({/* id, */ name, img, price}) => {
                     <img src={img} alt={name}/>
                     { '$' + price}
                 </li>
-                {/* <Link to={`/detail/${id}`}>Ver Detalle</Link> */} 
+                {/* <Link to={`/detail/${id}`} className='Option'>
+                    <h3>Ver detalle</h3>
+                </Link> */}
+            
             </div>
         </>
     )       
